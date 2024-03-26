@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+.container{
+    width: 50vh;
+    height: 20vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 8px solid black;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+  }
+  .intern3 {
+    position: relative;
+  z-index: 9999;
+ margin-right: 30%;
+    width: 10%;
+    height: 100%;
+    transform: scaleX(0);
+    transition: transform 1s ease ; 
+        background-color: transparent;
+
+    }
+
+  .intern2 {
+  width: 100%;
+  height: 1%;
+  margin-top: 5%;
+  transform: scaleX(0);
+  transition: transform 1s ease ; 
+      background-color: transparent;
+  }
+.container:hover {
+     .intern2{
+        width: 40%;
+        transform: scale(50);
+            background-color: rgb(150, 245, 8);
+            transition: transform 1s ease ;
+    }
+    .intern3{
+        width: 40%;
+        transform: scaleY(50);
+            background-color: rgb(150, 245, 8);
+            transition: transform 2s ease ;
+    } 
+     
+}
+
+.container:not(:hover) {
+     .intern2{
+        width: 100%;
+        transform: scale(0);
+        transition:   background-color 7s , transform 1s;
+            background-color: transparent;  
+    } 
+
+    .intern3{
+        width: 100%;
+        transform: scale(0);
+        transition:   background-color 7s , transform 1s;
+            background-color: transparent;  
+    }
+
+    
+
+}
+
+.pharma{
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+    h2{
+        color: black;
+        font-size: 50px;
+        text-align: center;
+       }
+}

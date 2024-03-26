@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    height: 100vh;
+    display: flex;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hoverable {
+    width: 50vw;
+    height: 40vh;
+    outline: 4px solid red;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    position: relative;
+    overflow: hidden;
+    transition: color 2s;
+    color: red;
+  }
+  
+  .hoverable div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p{
+    z-index: 2;
+  }
+
+  .line{
+    top: 0;
+    height: 0% !important;
+    background-color: red;
+    border-radius: 0 0 50px 50px;
+    transition: height 2s,border-radius 3s;
+  }
+
+  .hoverable:hover {
+    color: black;
+    .line {
+      height: 100% !important;
+      border-radius: 0 0 0 0;
+    }
+  }

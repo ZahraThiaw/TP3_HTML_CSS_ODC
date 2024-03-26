@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    height: 100vh;
+    display: flex;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hoverable {
+    width: 30vw;
+    height: 20vh;
+    outline: 4px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    position: relative;
+    background-color: rgb(196, 192, 192);
+    color: black;
+  }
+  
+  .hoverable div {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s, translate 5s 1s,transform 4s .25s, scale 1.5s;
+  }
+
+  .line{
+    transform-origin: 25% 50%;
+    z-index: 1;
+    transition: color 5s;
+  }
+
+  .left{
+    transform-origin: 75% 50% ;
+    z-index: 2;
+  }
+
+  .middle p{
+    color: black;
+    z-index: 1;
+  }
+
+  p{
+    z-index: 2;
+  }
+
+
+  .hoverable:hover {
+    .line {
+      translate: -50%;
+      scale: .3;
+      transform: rotateY(180deg);
+      opacity: 0;
+    }
+    .left {
+      opacity: 0;
+      translate: 50%;
+      scale: .3;
+      transform: rotateY(180deg);
+    }
+
+  }
